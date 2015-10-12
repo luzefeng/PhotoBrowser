@@ -12,8 +12,13 @@ Swift 2.0 类似微信/微博的图片展示，可展示本地和网络图片，
 现在开源出来，希望能能帮助到别人，代码有不尽如人意的地方，希望多多提意见。
 
 ##用法
-把Browser文件夹拖到项目工程里即可，
+```swift
+把Browser文件夹拖到项目工程里
 Podfile里添加
+pod 'SDWebImage'
+pod 'JGProgressHUD'
+pod 'MBProgressHUD'
+```
 展示本地图片
 ```swift
 //展示本地图片
