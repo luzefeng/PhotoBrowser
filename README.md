@@ -14,6 +14,8 @@ Swift 2.0 类似微信/微博的图片展示，可展示本地和网络图片，
 ##用法
 展示本地图片
 ```swift
+//展示本地图片
+var localImage = [NSURL(string: "2-1.jpg")!, NSURL(string: "2-2.jpg")!, NSURL(string: "2-3.jpg")!, NSURL(string: "2-4.jpg")!]
 //设置本地数据源
 browser = PhotoBrowserView.initWithPhotos(withUrlArray: self.localImage)
 //类型为本地
@@ -25,6 +27,8 @@ browser.show()
 ```
 展示网络图片
 ```swift
+//网络图片
+var remoteImage = [NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45787-uWfw1o.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45770-iRuWwg.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45543-jr0g0R.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45541-qd82Lh.jpg")!]
 //网路数据源
 browser = PhotoBrowserView.initWithPhotos(withUrlArray: self.remoteImage)
 //类型为网络
