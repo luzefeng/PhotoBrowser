@@ -27,7 +27,7 @@ var localImage = [NSURL(string: "2-1.jpg")!, NSURL(string: "2-2.jpg")!, NSURL(st
 browser = PhotoBrowserView.initWithPhotos(withUrlArray: self.localImage)
 //类型为本地
 browser.sourceType = SourceType.LOCAL
-//设置展示哪张图片
+//设置展示的第一张图片
 browser.index = indexPath.row
 //显示
 browser.show()
@@ -40,7 +40,7 @@ var remoteImage = [NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/
 browser = PhotoBrowserView.initWithPhotos(withUrlArray: self.remoteImage)
 //类型为网络
 browser.sourceType = SourceType.REMOTE
-//设置展示哪张图片
+//设置展示的第一张图片
 browser.index = indexPath.row
 //显示
 browser.show()
