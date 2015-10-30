@@ -101,6 +101,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let placeHolder = UIImage(named: "placeholder.png")
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! PhotoBrowserCell
         
         if indexPath.section == 0{
@@ -110,7 +111,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
         
         if indexPath.section == 1{
             let remoteUrl = remoteThumbImage[indexPath.row]
-            cell.imageView.sd_setImageWithURL(remoteUrl) { (image, _, _ , _ ) -> Void in
+            cell.imageView.sd_setImageWithURL(remoteUrl, placeholderImage: placeHolder) { (image, _, _ , _ ) -> Void in
                 
                 if image == nil {
                     return
