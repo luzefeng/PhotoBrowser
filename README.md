@@ -49,3 +49,6 @@ browser.show()
 ##预览
 上面4张是本地图片，下面4张是网络图片，网络图片未缓存的显示菊花，已缓存的不会显示菊花
 ![](https://github.com/luzefeng/PhotoBrowser/blob/master/preview.gif)
+
+#License
+MIT license. 
