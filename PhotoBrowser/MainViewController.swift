@@ -43,7 +43,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
         collectionView!.collectionViewLayout = layout
         collectionView!.delegate = self
         collectionView!.dataSource = self
-        self.collectionView!.registerClass(PhotoBrowserCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        self.collectionView!.registerClass(PhotoBrowserCollectionCell.self, forCellWithReuseIdentifier: cellIdentifier)
         
         self.view.addSubview(collectionView!)
     }
@@ -102,7 +102,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let placeHolder = UIImage(named: "placeholder.png")
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! PhotoBrowserCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! PhotoBrowserCollectionCell
         
         if indexPath.section == 0{
             let localUrl = localThumbImage[indexPath.row]

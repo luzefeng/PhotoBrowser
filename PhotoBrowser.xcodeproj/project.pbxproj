@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E06D3FCC8CDEFF8911FE132 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE880CA5DC729C114005221 /* libPods.a */; };
+		807BDD061C06B08600B93B7D /* PhotoBrowserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BDD051C06B08600B93B7D /* PhotoBrowserCollectionCell.swift */; };
 		8913045A1BE3A871006970ED /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 891304591BE3A871006970ED /* placeholder.png */; };
 		8939216F1BC933AE00BEF937 /* PhotoBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939216E1BC933AE00BEF937 /* PhotoBrowserTests.swift */; };
 		8939217A1BC933AE00BEF937 /* PhotoBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893921791BC933AE00BEF937 /* PhotoBrowserUITests.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		807BDD051C06B08600B93B7D /* PhotoBrowserCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCollectionCell.swift; sourceTree = "<group>"; };
 		891304591BE3A871006970ED /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		893921531BC933AE00BEF937 /* PhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8939216A1BC933AE00BEF937 /* PhotoBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			children = (
 				8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */,
 				8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */,
+				807BDD051C06B08600B93B7D /* PhotoBrowserCollectionCell.swift */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				8939219D1BC934E000BEF937 /* PhotoBrowserView.swift in Sources */,
 				893921931BC9340A00BEF937 /* AppDelegate.swift in Sources */,
 				893921981BC9340A00BEF937 /* PhotoBrowser.xcdatamodeld in Sources */,
+				807BDD061C06B08600B93B7D /* PhotoBrowserCollectionCell.swift in Sources */,
 				893921A11BC94A4A00BEF937 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
