@@ -21,6 +21,8 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
     
     //显示当前页码
     var title: UILabel?
+    //关闭按钮
+    var close: UIButton?
     //下载按钮
     var downloadButton: UIButton?
 
@@ -83,6 +85,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         self.addSubview(collectionView!)
         
         addTitleLabel(frame)
+        addCloseBtn(frame)
         addDownloadButton(frame)
     }
     
@@ -95,7 +98,14 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         
         addSubview(title!)
     }
-    
+    //添加关闭按钮
+    func addCloseBtn(frame: CGRect) {
+        close = UIButton(frame: CGRect(x: 8, y: 5.0, width: 30, height: heightUnit!))
+        close?.setImage(UIImage(named: "close"), forState: UIControlState.Normal)
+        close?.addTarget(self, action: Selector("close:"), forControlEvents: UIControlEvents.TouchUpInside)
+        addSubview(close!)
+    }
+
     //添加按钮
     func addDownloadButton(frame: CGRect){
         downloadButton = UIButton(frame: CGRect(x: 20, y: heightUnit!*(count - 1), width: 35, height: 35))
@@ -134,9 +144,8 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         title?.text = "\(page)/\(photos.count)"
         
     }
-    
     //remove view
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func close(sender: UIButton) {
         self.removeFromSuperview()
     }
     
@@ -204,6 +213,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
             () in
             cell.imageView.frame = frame
         })
+         cell.scrollView.zoomScale = 1
         return cell
     }
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AFBE4B37A29E8ABEA245B756DC7DB448D00B4998",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AFBE4B37A29E8ABEA245B756DC7DB448D00B4998" : 0,
+    "06B08C0A9D479E7A517F56AB1B1185642AD4AE2D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5E4D4490-B8C6-40E3-8D8B-8ECEDF4185CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AFBE4B37A29E8ABEA245B756DC7DB448D00B4998" : "PhotoBrowser\/",
+    "06B08C0A9D479E7A517F56AB1B1185642AD4AE2D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PhotoBrowser",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PhotoBrowser.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suesu123456\/-swift-alimonyCal.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "06B08C0A9D479E7A517F56AB1B1185642AD4AE2D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suesu123456\/PhotoBrowser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AFBE4B37A29E8ABEA245B756DC7DB448D00B4998"
+    }
+  ]
+}
