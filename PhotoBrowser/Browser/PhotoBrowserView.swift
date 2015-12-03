@@ -108,7 +108,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
 
     //添加按钮
     func addDownloadButton(frame: CGRect){
-        downloadButton = UIButton(frame: CGRect(x: 20, y: heightUnit!*(count - 1), width: 35, height: 35))
+        downloadButton = UIButton(frame: CGRect(x: frame.width/2 - 20, y: heightUnit!*(count - 1), width: 40, height: 35))
         let downloadImage = UIImage(named: "Download")
         let stretchableButtonImage = downloadImage?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
         downloadButton!.setBackgroundImage(stretchableButtonImage, forState: UIControlState.Normal)
