@@ -85,7 +85,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         self.addSubview(collectionView!)
         
         addTitleLabel(frame)
-        addCloseBtn(frame)
+//        addCloseBtn(frame)
         addDownloadButton(frame)
     }
     
