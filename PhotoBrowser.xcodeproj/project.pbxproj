@@ -21,6 +21,7 @@
 		8939219D1BC934E000BEF937 /* PhotoBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */; };
 		8939219F1BC938C800BEF937 /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */; };
 		893921A11BC94A4A00BEF937 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893921A01BC94A4A00BEF937 /* MainViewController.swift */; };
+		89729B8A1C1407B9000351E4 /* BrowserCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */; };
 		89EF071D1BCA760700DC868C /* 2-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89EF07141BCA760700DC868C /* 2-1.jpg */; };
 		89EF071E1BCA760700DC868C /* 2-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89EF07151BCA760700DC868C /* 2-2.jpg */; };
 		89EF071F1BCA760700DC868C /* 2-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89EF07161BCA760700DC868C /* 2-3.jpg */; };
@@ -68,6 +69,7 @@
 		8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
 		893921A01BC94A4A00BEF937 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		893A2F891BCA61CC003C18B8 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserCellDelegate.swift; sourceTree = "<group>"; };
 		89EF07141BCA760700DC868C /* 2-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-1.jpg"; sourceTree = "<group>"; };
 		89EF07151BCA760700DC868C /* 2-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-2.jpg"; sourceTree = "<group>"; };
 		89EF07161BCA760700DC868C /* 2-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-3.jpg"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */,
 				8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */,
 				807BDD051C06B08600B93B7D /* PhotoBrowserCollectionCell.swift */,
+				89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				893921931BC9340A00BEF937 /* AppDelegate.swift in Sources */,
 				893921981BC9340A00BEF937 /* PhotoBrowser.xcdatamodeld in Sources */,
 				807BDD061C06B08600B93B7D /* PhotoBrowserCollectionCell.swift in Sources */,
+				89729B8A1C1407B9000351E4 /* BrowserCellDelegate.swift in Sources */,
 				893921A11BC94A4A00BEF937 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

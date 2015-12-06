@@ -12,6 +12,7 @@ class PhotoBrowserCell: UICollectionViewCell, UIScrollViewDelegate {
     
     var scrollView: UIScrollView = UIScrollView()
     var imageView: UIImageView = UIImageView()
+    var delegate: BrowserCellDelagate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,11 +39,38 @@ class PhotoBrowserCell: UICollectionViewCell, UIScrollViewDelegate {
         
         scrollView.contentSize = imageView.frame.size
         //添加双击手势
-        var gr1:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleTapGesture:"))
-        gr1.numberOfTapsRequired = 1
-        gr1.numberOfTapsRequired = 2
+        let doubleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleDoubleTapGesture:"))
+        doubleTapGesture.numberOfTouchesRequired = 1
+        doubleTapGesture.numberOfTapsRequired = 2
         imageView.userInteractionEnabled = true
-        imageView.addGestureRecognizer(gr1)
+        imageView.addGestureRecognizer(doubleTapGesture)
+        
+        let singleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleSingleTapGesture:"))
+        singleTapGesture.numberOfTouchesRequired = 1
+        singleTapGesture.numberOfTapsRequired = 1
+        imageView.userInteractionEnabled = true
+        imageView.addGestureRecognizer(singleTapGesture)
+        
+        singleTapGesture.requireGestureRecognizerToFail(doubleTapGesture)
+    }
+    
+    func handleSingleTapGesture(sender: UITapGestureRecognizer) {
+        delegate?.singleTap()
+    }
+    
+    func handleDoubleTapGesture(sender: UITapGestureRecognizer) {
+        let factor:CGFloat = sender.view!.transform.a
+        if factor == 1 { //放大
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationDuration(NSTimeInterval(0.3))
+            scrollView.zoomScale = 2
+            UIView.commitAnimations()
+        }else{// 缩小
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationDuration(NSTimeInterval(0.3))
+            scrollView.zoomScale = 1
+            UIView.commitAnimations()
+        }
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
@@ -74,13 +102,4 @@ class PhotoBrowserCell: UICollectionViewCell, UIScrollViewDelegate {
         scrollView.contentSize = contentsFrame.size
         imageView.frame = contentsFrame
     }
-    func handleTapGesture(sender: UITapGestureRecognizer) {
-        let factor:CGFloat = sender.view!.transform.a
-        if factor == 1 { //放大
-            scrollView.zoomScale = 2
-        }else{// 缩小
-            scrollView.zoomScale = 1
-        }
-    }
-
 }

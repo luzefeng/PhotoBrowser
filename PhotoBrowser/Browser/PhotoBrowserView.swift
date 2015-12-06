@@ -13,7 +13,7 @@ enum SourceType{
     case REMOTE
 }
 
-class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDataSource {
+class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDataSource, BrowserCellDelagate {
 
     var collectionView: UICollectionView?
     let cellIdentifier = "Cell"
@@ -184,9 +184,14 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         hud.dismissAfterDelay(interval, animated: true)
     }
     
+    func singleTap() {
+        self.removeFromSuperview()
+    }
+    
     //设置每个cell
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! PhotoBrowserCell
+        cell.delegate = self
         let url = photos.objectAtIndex(indexPath.row) as! NSURL
         let frame = cell.imageView.frame
         let percent: CGFloat = 0.8
