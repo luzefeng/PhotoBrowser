@@ -116,8 +116,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
                 if image == nil{
                     return
                 }
-                
-                cell.imageView.image = image
             })
         }
     

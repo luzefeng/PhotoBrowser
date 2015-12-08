@@ -209,12 +209,10 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
                     self.addSubview(loop)
                 }
                 loop.progress = CGFloat(received)/CGFloat(total)
-                print(CGFloat(received)/CGFloat(total))
                 }, transform: nil, completion: { (image, url, type, stage, error) -> Void in
                     if image == nil{
                         return
                     }
-                    cell.imageView.image = image
             })
         }else{
             let image = UIImage(named: (url.absoluteString))
@@ -226,7 +224,8 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
             () in
             cell.imageView.frame = frame
         })
-         cell.scrollView.zoomScale = 1
+        cell.scrollView.zoomScale = 1
+        
         return cell
     }
 }
