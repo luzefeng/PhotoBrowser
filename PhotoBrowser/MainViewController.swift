@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import YYWebImage
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDataSource{
     
     var collectionView: UICollectionView?
     let cellIdentifier = "Cell"
     //设置本地缩略图
-    var localThumbImage = [NSURL(string: "1-1.jpg"), NSURL(string: "1-2.jpg"), NSURL(string: "1-3.jpg"), NSURL(string: "1-4.jpg")]
+    var localThumbImage = [NSURL(string: "1-1.jpg"), NSURL(string: "1-2.jpg"), NSURL(string: "1-3.jpg")]
     //展示本地图片
-    var localImage = [NSURL(string: "2-1.jpg")!, NSURL(string: "2-2.jpg")!, NSURL(string: "2-3.jpg")!, NSURL(string: "2-4.jpg")!]
+    var localImage = [NSURL(string: "2-1.jpg")!, NSURL(string: "2-2.jpg")!, NSURL(string: "2-3.jpg")!]
     
     //网络缩略图
-    var remoteThumbImage = [NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-KVoUKo.jpg"), NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-dQCJkd.jpg"), NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-xP6hnq.jpg"), NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-Y59NbO.jpg")]
+    var remoteThumbImage = [NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-KVoUKo.jpg"), NSURL(string: "http://img.1985t.com/uploads/previews/2015/08/0-dQCJkd.jpg"), NSURL(string: "http://imgs.gifxiu.net/upload/20150609/171753_3750.gif"), NSURL(string: "http://imgs.gifxiu.net/upload/20151104/210950_1093.gif")]
     
     //网络图片
-    var remoteImage = [NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45787-uWfw1o.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45770-iRuWwg.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45543-jr0g0R.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45541-qd82Lh.jpg")!]
+    var remoteImage = [NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45787-uWfw1o.jpg")!, NSURL(string: "http://img.1985t.com/uploads/attaches/2015/08/45770-iRuWwg.jpg")!, NSURL(string: "http://imgs.gifxiu.net/upload/20150609/171753_3750.gif")!, NSURL(string: "http://imgs.gifxiu.net/upload/20151104/210950_1093.gif")!]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,14 +112,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UIScrollVi
         
         if indexPath.section == 1{
             let remoteUrl = remoteThumbImage[indexPath.row]
-            cell.imageView.sd_setImageWithURL(remoteUrl, placeholderImage: placeHolder) { (image, _, _ , _ ) -> Void in
-                
-                if image == nil {
+            cell.imageView.yy_setImageWithURL(remoteUrl, placeholder: placeHolder, options: YYWebImageOptions.SetImageWithFadeAnimation, completion: { (image, _, _, _, _) -> Void in
+                if image == nil{
                     return
                 }
                 
                 cell.imageView.image = image
-            }
+            })
         }
     
         return cell

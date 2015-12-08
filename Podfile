@@ -1,3 +1,5 @@
-pod 'SDWebImage'
+platform :ios, '8.0'
+use_frameworks!
+
 pod 'JGProgressHUD'
-pod 'MBProgressHUD'
+pod "YYWebImage"

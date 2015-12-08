@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import JGProgressHUD
+import MBProgressHUD
+import YYWebImage
 
 enum SourceType{
     case LOCAL
@@ -197,17 +200,22 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         let percent: CGFloat = 0.8
         cell.imageView.frame = CGRect(x: frame.width*(1 - percent)/2, y: frame.height*(1 - percent)/2, width: frame.width*percent, height: frame.height*percent)
         if sourceType == SourceType.REMOTE{
-            let loadingNotification = MBProgressHUD.showHUDAddedTo(self, animated: true)
-            loadingNotification.mode = MBProgressHUDMode.Indeterminate
-                            loadingNotification.labelText = "加载中..."
-            cell.imageView.sd_setImageWithURL(url) { (image, _, _ , _ ) -> Void in
-                MBProgressHUD.hideHUDForView(self, animated: false)
-                if image == nil {
-                    return
+            let loop = SDTransparentPieProgressView.progressView() as! SDTransparentPieProgressView
+            
+            loop.frame = CGRect(x: self.frame.width/2 - 30, y: self.frame.height/2 - 30, width: 60, height: 60)
+            
+            cell.imageView.yy_setImageWithURL(url, placeholder: nil, options:  YYWebImageOptions.ProgressiveBlur, progress: { (received, total) -> Void in
+                if received != 0{
+                    self.addSubview(loop)
                 }
-                
-                cell.imageView.image = image
-            }
+                loop.progress = CGFloat(received)/CGFloat(total)
+                print(CGFloat(received)/CGFloat(total))
+                }, transform: nil, completion: { (image, url, type, stage, error) -> Void in
+                    if image == nil{
+                        return
+                    }
+                    cell.imageView.image = image
+            })
         }else{
             let image = UIImage(named: (url.absoluteString))
             

@@ -1,18 +1,13 @@
 PODS:
-  - JGProgressHUD (1.3)
-  - MBProgressHUD (0.9.1)
-  - SDWebImage (3.7.3):
-    - SDWebImage/Core (= 3.7.3)
-  - SDWebImage/Core (3.7.3)
+  - JGProgressHUD (1.3.1)
+  - YYWebImage (0.9.11)
 
 DEPENDENCIES:
   - JGProgressHUD
-  - MBProgressHUD
-  - SDWebImage
+  - YYWebImage
 
 SPEC CHECKSUMS:
-  JGProgressHUD: a58f62d3afac173d201250c3ba628fe44bd67017
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  YYWebImage: a65b28461dc63d3b84de7c06ea0fbc4d46cdcd16
 
-COCOAPODS: 0.39.0.beta.4
+COCOAPODS: 0.39.0

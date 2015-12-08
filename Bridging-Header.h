@@ -9,7 +9,6 @@
 #ifndef Bridging_Header_h
 #define Bridging_Header_h
 
-#import "SDWebImage/UIImageView+WebCache.h"
-#import "JGProgressHUD.h"
-#import "Pods/MBProgressHUD/MBProgressHUD.h"
+#import "SDProgressView.h"
+
 #endif /* Bridging_Header_h */
