@@ -19,13 +19,7 @@
 		8939219D1BC934E000BEF937 /* PhotoBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */; };
 		8939219F1BC938C800BEF937 /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */; };
 		893921A11BC94A4A00BEF937 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893921A01BC94A4A00BEF937 /* MainViewController.swift */; };
-		8951D1C41C1726C000442646 /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1B61C1726C000442646 /* SDBallProgressView.m */; };
-		8951D1C51C1726C000442646 /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1B81C1726C000442646 /* SDBaseProgressView.m */; };
-		8951D1C61C1726C000442646 /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1BA1C1726C000442646 /* SDLoopProgressView.m */; };
-		8951D1C71C1726C000442646 /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1BC1C1726C000442646 /* SDPieLoopProgressView.m */; };
-		8951D1C81C1726C000442646 /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1BE1C1726C000442646 /* SDPieProgressView.m */; };
-		8951D1C91C1726C000442646 /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1C11C1726C000442646 /* SDRotationLoopProgressView.m */; };
-		8951D1CA1C1726C000442646 /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1C31C1726C000442646 /* SDTransparentPieProgressView.m */; };
+		8951D1E51C185C6C00442646 /* RMDownloadIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951D1E41C185C6C00442646 /* RMDownloadIndicator.swift */; };
 		89729B8A1C1407B9000351E4 /* BrowserCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */; };
 		89729B901C140A54000351E4 /* PhotoBrowserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89729B8F1C140A54000351E4 /* PhotoBrowserCollectionCell.swift */; };
 		89EF071D1BCA760700DC868C /* 2-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89EF07141BCA760700DC868C /* 2-1.jpg */; };
@@ -75,22 +69,7 @@
 		8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserView.swift; sourceTree = "<group>"; };
 		8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
 		893921A01BC94A4A00BEF937 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		893A2F891BCA61CC003C18B8 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		8951D1B51C1726C000442646 /* SDBallProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBallProgressView.h; sourceTree = "<group>"; };
-		8951D1B61C1726C000442646 /* SDBallProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBallProgressView.m; sourceTree = "<group>"; };
-		8951D1B71C1726C000442646 /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
-		8951D1B81C1726C000442646 /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
-		8951D1B91C1726C000442646 /* SDLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoopProgressView.h; sourceTree = "<group>"; };
-		8951D1BA1C1726C000442646 /* SDLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoopProgressView.m; sourceTree = "<group>"; };
-		8951D1BB1C1726C000442646 /* SDPieLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieLoopProgressView.h; sourceTree = "<group>"; };
-		8951D1BC1C1726C000442646 /* SDPieLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieLoopProgressView.m; sourceTree = "<group>"; };
-		8951D1BD1C1726C000442646 /* SDPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieProgressView.h; sourceTree = "<group>"; };
-		8951D1BE1C1726C000442646 /* SDPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieProgressView.m; sourceTree = "<group>"; };
-		8951D1BF1C1726C000442646 /* SDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDProgressView.h; sourceTree = "<group>"; };
-		8951D1C01C1726C000442646 /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
-		8951D1C11C1726C000442646 /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
-		8951D1C21C1726C000442646 /* SDTransparentPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTransparentPieProgressView.h; sourceTree = "<group>"; };
-		8951D1C31C1726C000442646 /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
+		8951D1E41C185C6C00442646 /* RMDownloadIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDownloadIndicator.swift; sourceTree = "<group>"; };
 		89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserCellDelegate.swift; sourceTree = "<group>"; };
 		89729B8F1C140A54000351E4 /* PhotoBrowserCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCollectionCell.swift; sourceTree = "<group>"; };
 		89EF07141BCA760700DC868C /* 2-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-1.jpg"; sourceTree = "<group>"; };
@@ -151,7 +130,6 @@
 		8939214A1BC933AE00BEF937 = {
 			isa = PBXGroup;
 			children = (
-				893A2F891BCA61CC003C18B8 /* Bridging-Header.h */,
 				893921881BC9340A00BEF937 /* PhotoBrowser */,
 				8939216D1BC933AE00BEF937 /* PhotoBrowserTests */,
 				893921781BC933AE00BEF937 /* PhotoBrowserUITests */,
@@ -211,34 +189,12 @@
 		8939219B1BC934B400BEF937 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
-				8951D1B41C1726C000442646 /* SDProgressView */,
 				8939219C1BC934E000BEF937 /* PhotoBrowserView.swift */,
 				8939219E1BC938C800BEF937 /* PhotoBrowserCell.swift */,
 				89729B891C1407B9000351E4 /* BrowserCellDelegate.swift */,
+				8951D1E41C185C6C00442646 /* RMDownloadIndicator.swift */,
 			);
 			path = Browser;
-			sourceTree = "<group>";
-		};
-		8951D1B41C1726C000442646 /* SDProgressView */ = {
-			isa = PBXGroup;
-			children = (
-				8951D1B51C1726C000442646 /* SDBallProgressView.h */,
-				8951D1B61C1726C000442646 /* SDBallProgressView.m */,
-				8951D1B71C1726C000442646 /* SDBaseProgressView.h */,
-				8951D1B81C1726C000442646 /* SDBaseProgressView.m */,
-				8951D1B91C1726C000442646 /* SDLoopProgressView.h */,
-				8951D1BA1C1726C000442646 /* SDLoopProgressView.m */,
-				8951D1BB1C1726C000442646 /* SDPieLoopProgressView.h */,
-				8951D1BC1C1726C000442646 /* SDPieLoopProgressView.m */,
-				8951D1BD1C1726C000442646 /* SDPieProgressView.h */,
-				8951D1BE1C1726C000442646 /* SDPieProgressView.m */,
-				8951D1BF1C1726C000442646 /* SDProgressView.h */,
-				8951D1C01C1726C000442646 /* SDRotationLoopProgressView.h */,
-				8951D1C11C1726C000442646 /* SDRotationLoopProgressView.m */,
-				8951D1C21C1726C000442646 /* SDTransparentPieProgressView.h */,
-				8951D1C31C1726C000442646 /* SDTransparentPieProgressView.m */,
-			);
-			path = SDProgressView;
 			sourceTree = "<group>";
 		};
 		89EF07131BCA760700DC868C /* LocalImage */ = {
@@ -341,6 +297,7 @@
 				TargetAttributes = {
 					893921521BC933AE00BEF937 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 557XX2G4GZ;
 					};
 					893921691BC933AE00BEF937 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -462,20 +419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8951D1C91C1726C000442646 /* SDRotationLoopProgressView.m in Sources */,
-				8951D1C71C1726C000442646 /* SDPieLoopProgressView.m in Sources */,
 				8939219F1BC938C800BEF937 /* PhotoBrowserCell.swift in Sources */,
-				8951D1C41C1726C000442646 /* SDBallProgressView.m in Sources */,
 				8939219D1BC934E000BEF937 /* PhotoBrowserView.swift in Sources */,
 				893921931BC9340A00BEF937 /* AppDelegate.swift in Sources */,
 				89729B901C140A54000351E4 /* PhotoBrowserCollectionCell.swift in Sources */,
 				893921981BC9340A00BEF937 /* PhotoBrowser.xcdatamodeld in Sources */,
-				8951D1CA1C1726C000442646 /* SDTransparentPieProgressView.m in Sources */,
 				89729B8A1C1407B9000351E4 /* BrowserCellDelegate.swift in Sources */,
 				893921A11BC94A4A00BEF937 /* MainViewController.swift in Sources */,
-				8951D1C61C1726C000442646 /* SDLoopProgressView.m in Sources */,
-				8951D1C51C1726C000442646 /* SDBaseProgressView.m in Sources */,
-				8951D1C81C1726C000442646 /* SDPieProgressView.m in Sources */,
+				8951D1E51C185C6C00442646 /* RMDownloadIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,11 +567,12 @@
 			baseConfigurationReference = E3F12072BC1C72528A5D0B30 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhotoBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lu.free.photobrowser.PhotoBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lu.free.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -629,11 +581,12 @@
 			baseConfigurationReference = A75E477D8E738C68DE3DDA4A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PhotoBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lu.free.photobrowser.PhotoBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lu.free.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

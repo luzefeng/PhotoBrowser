@@ -8,12 +8,17 @@
 
 import UIKit
 import JGProgressHUD
-import MBProgressHUD
 import YYWebImage
 
 enum SourceType{
     case LOCAL
     case REMOTE
+}
+
+extension UIColor{
+    class func mainColor() ->UIColor{
+        return UIColor(red:240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+    }
 }
 
 class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDataSource, BrowserCellDelagate {
@@ -200,15 +205,24 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         let percent: CGFloat = 0.8
         cell.imageView.frame = CGRect(x: frame.width*(1 - percent)/2, y: frame.height*(1 - percent)/2, width: frame.width*percent, height: frame.height*percent)
         if sourceType == SourceType.REMOTE{
-            let loop = SDTransparentPieProgressView.progressView() as! SDTransparentPieProgressView
-            
-            loop.frame = CGRect(x: self.frame.width/2 - 30, y: self.frame.height/2 - 30, width: 60, height: 60)
-            
+            //progress bar
+            let mixedIndicator: RMDownloadIndicator = RMDownloadIndicator(rectframe: CGRectMake(CGRectGetWidth(self.bounds)/2 - 30, CGRectGetMaxY(self.bounds)/2 - 30, 60, 60), type: RMIndicatorType.kRMMixedIndictor)
+            mixedIndicator.backgroundColor = UIColor.clearColor()
+            mixedIndicator.fillColor = UIColor.mainColor()
+            mixedIndicator.strokeColor = UIColor.mainColor()
+            mixedIndicator.closedIndicatorBackgroundStrokeColor = UIColor.mainColor()
+            mixedIndicator.radiusPercent = 0.45
+            mixedIndicator.loadIndicator()
+
             cell.imageView.yy_setImageWithURL(url, placeholder: nil, options:  YYWebImageOptions.ProgressiveBlur, progress: { (received, total) -> Void in
+                //没有缓存过，加入progress bar
                 if received != 0{
-                    self.addSubview(loop)
+                    if !self.subviews.contains(mixedIndicator){
+                        self.addSubview(mixedIndicator)
+                    }
                 }
-                loop.progress = CGFloat(received)/CGFloat(total)
+
+                mixedIndicator.updateWithTotalBytes(CGFloat(total), downloadedBytes: CGFloat(received))
                 }, transform: nil, completion: { (image, url, type, stage, error) -> Void in
                     if image == nil{
                         return
