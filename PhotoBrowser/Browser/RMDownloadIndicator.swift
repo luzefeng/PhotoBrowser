@@ -187,9 +187,6 @@ class RMDownloadIndicator: UIView {
     
     // update the downloadIndicator
     func updateWithTotalBytes(bytes: CGFloat, downloadedBytes: CGFloat) {
-        if downloadedBytes >= bytes{
-            self.removeFromSuperview()
-        }
         lastUpdatedPath = UIBezierPath.init(CGPath: animatingLayer.path!)
         paths.removeAll(keepCapacity: false)
         let destinationAngle: CGFloat = self.destinationAngleForRatio((downloadedBytes / bytes))
@@ -203,6 +200,9 @@ class RMDownloadIndicator: UIView {
         pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         pathAnimation.removedOnCompletion = true
         animatingLayer.addAnimation(pathAnimation, forKey: "path")
+        if downloadedBytes >= bytes{
+            self.removeFromSuperview()
+        }
     }
     
     func destinationAngleForRatio(ratio: CGFloat) -> CGFloat {
